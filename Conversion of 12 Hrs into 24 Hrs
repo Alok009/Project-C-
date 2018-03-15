@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string timeConversion(string s) {
+    int h1 = (int)s[1]-'0';
+    int h2 = (int)s[0]-'0';
+    int h  = (h2*10+h1);
+    if(s[8]=='A'){
+        if(h==12){
+            cout<<"00";
+            for(int i = 2;i<=7;i++)
+                cout<<s[i];
+               }
+            else {
+                for(int i = 0;i<=7;i++)
+                cout<<s[i];
+            }}
+    
+    else if(s[8]=='P')
+    {
+            if(h==12){
+          cout<<"12";
+         for(int i=2;i<=7;i++)
+             cout<<s[i];
+         }
+    else {
+        cout<<12+h;
+    for(int i = 2;i<=7;i++)
+        cout<<s[i];}
+    }
+    return s;// Complete this function
+}
+
+int main() {
+    string s;
+    cin >> s;
+    string result = timeConversion(s);
+    //cout << result << endl;
+    return 0;
+}
